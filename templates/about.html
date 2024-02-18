@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        /* CSS for Hover Effect */
+.col-md-4:hover {
+    background-color: white; /* Change background color on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    
+}
+
+    </style>
+</head>
+<body style="background-color: rgba(131, 79, 5, 0.1);">
+    {% include "navbar.html" %}
+    {% block content %}
+<div class="container ">
+    <h1 class="text-center" style="font-style: italic;color: rgb(131, 79, 5);">Why Choose Us</h1>
+    <div class="row mt-3">
+        <div class="col-md-6 ">
+            <img src="{% static 'images/11.jpg' %}" alt="" style="width:100%;">
+        </div>
+        <div class="col-md-6 mt-2">
+            <h3 style="font-weight: bold;font-style: italic;">Experience the difference of choosing us, where innovation meets passion, and every project is a masterpiece that reflects our relentless pursuit of perfection.</h3>
+            <ul style="list-style-type: none;">
+                <li>&#10148; Customized Conceptual Design</li>
+                <li>&#10148; Skilled Workers</li>
+                <li>&#10148; On-Time Delivery</li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
+    <div class="container mt-2" id="numberContainer" style="padding: 50px;">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="text-center" style="padding: 20px; color:rgb(131, 79, 5)">
+                    <div class="card-body">
+                        <h2 class="card-title" id="projectsCompleted">0</h2>
+                        <p class="card-text" style="font-style: italic;">Projects Completed</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center" style="padding: 20px; color:rgb(131, 79, 5)">
+                    <div class="card-body">
+                        <h2 class="card-title" id="happyCustomers">0</h2>
+                        <p class="card-text" style="font-style: italic;">Happy Customers</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center" style="padding: 20px; color:rgb(131, 79, 5)">
+                    <div class="card-body">
+                        <h2 class="card-title" id="countriesServed">0</h2>
+                        <p class="card-text" style="font-style: italic;">Years of Experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <!-- what_we_offer.html -->
+<!-- what_we_offer.html -->
+<div class="container mt-3 hello" >
+    <div class="row">
+        <div class="col-md-4 shadow-sm  ">
+            <img src="{% static 'images/11.jpg' %}" class="card-img-top mx-auto d-block" alt="Reason 3 Image" style="border-radius: 20px;height: 200px;">
+            <h4 class="text-center" style="font-style: italic;">BEST PRICE</h4>
+            <p style="font-weight: bold;">We ensure that you get the best price in the market. These prices are made conceivable with our state of the art in-house production unit. We see that you get your dream home designed at the most justified prices.</p>
+        </div>
+        <div class="col-md-4 shadow-sm">
+            <img src="{% static 'images/11.jpg' %}" class="card-img-top mx-auto d-block" alt="Reason 3 Image" style="border-radius: 20px;height: 200px;">
+            <h4 class="text-center" style="font-style: italic;">QUALITY</h4>
+            <p style="font-weight: bold;">“Quality you can bank on,” and that’s our promise. We are a vertically integrated design company. With the best design brains in the industry and an in-house production unit, we aim at providing the best quality, with individual attention each product produced.</p>
+        </div>
+        <div class="col-md-4 shadow-sm ">
+            <img src="{% static 'images/11.jpg' %} " class="card-img-top mx-auto d-block" alt="Reason 3 Image" style="border-radius: 20px;height: 200px;">
+            <h4 class="text-center" style="font-style: italic;">TRANSPARENT</h4>
+            <p style="font-weight: bold;">We believe in transparency at every step to make your dream home a reality. The teamwork of our designers and customers ministers us in accomplishing a beautiful Decor home. We endeavor to share, guide and prescribe the most beautiful products for a luxury living.</p>
+        </div>
+    </div>
+    
+    <div class="text-center mt-5">
+        <a href="#" class="btn btn-danger btn-lg">Contact Us</a>
+    </div>
+</div>
+
+    
+    {% endblock %}
+    {% include "footer.html" %}
+
+    <script>
+        function animateNumber(element, targetValue) {
+            let current = 0;
+             let increment = Math.ceil(targetValue / 40); // Adjust the speed of animation here
+        
+            let interval = setInterval(function() {
+                    current += increment;
+                    if (current >= targetValue) {
+                        current = targetValue;
+                        clearInterval(interval);
+                    }
+                    element.textContent = current + (targetValue > 5 ? "+" : ""); // Add plus sign if target value is greater than 10
+                }, 20); // Adjust the interval here
+            }
+        
+            // Call the animateNumber function for each card title when hovering
+            document.getElementById("numberContainer").addEventListener("mouseenter", function() {
+                animateNumber(document.getElementById("projectsCompleted"), 1000);
+                animateNumber(document.getElementById("happyCustomers"), 1000);
+                animateNumber(document.getElementById("countriesServed"), 7);
+            });
+        
+            // Call the animateNumber function for each card title initially
+            animateNumber(document.getElementById("projectsCompleted"), 1000);
+            animateNumber(document.getElementById("happyCustomers"), 1000);
+            animateNumber(document.getElementById("countriesServed"), 7);
+</script>
+    <script src="static/js/bootstrap.min.js"></script>
+      <script src="static/js/popper.js"></script>
+</body>
+</html>

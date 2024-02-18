@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container-fluid" >
+        <div class="row">
+            <div class="col-md-4 mx-auto shadow w-75 ">
+              
+              <form method="POST" action="quote" style="padding: 40px;">
+                {% if errmsg %}
+                <div class="alert alert-danger">
+                    {{errmsg}}
+                </div>
+                {% endif %}
+                <h4 style="text-align: center;"><span style="color: rgb(239, 237, 236);font-weight: bold;background-color: black;border-radius: 20px;">Contact Us</span></h4>
+                {% csrf_token %}
+                <div class="mt-3">
+                    <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name" placeholder="NAME">
+                </div>
+                <div class="mt-3">
+                    <input type="EMAIL" class="form-control" id="exampleInputPassword1" name="email" placeholder="EMAIL">
+                </div>
+                <div class="mt-3">
+                    <input type="tel" class="form-control" id="exampleInputPassword1" name="number" placeholder="PHONE NUMBER">
+                </div>
+                <div class="mt-3">
+                    <select class="form-control" id="residenceType" name="residence_type">
+                        <option value="">Select Residence Type</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="villa">Villa</option>
+                        <option value="bungalow">Bungalow</option>
+                        <option value="independent_house">Independent House</option>
+                    </select>
+                </div>
+                <div class="mt-3">
+                    <select class="form-control" id="bedrooms" name="bedrooms">
+                        <option value="">Select Number of Bedrooms</option>
+                        <option value="1BHK">1 BHK</option>
+                        <option value="2BHK">2 BHK</option>
+                        <option value="3BHK">3 BHK</option>
+                        <option value="4BHK">4 BHK</option>
+                    </select>
+                </div>
+                <input type="submit" value="GET QUOTE" name="" id="" class="btn btn-danger w-100 mt-3">
+            </form>
+            
+    </div>
+</div>
+</div>
+    <script src="static/js/bootstrap.min.js"></script>
+      <script src="static/js/popper.js"></script>
+</body>
+</html>

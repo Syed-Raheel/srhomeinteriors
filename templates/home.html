@@ -1,0 +1,191 @@
+{% extends "base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+</head>
+<body>
+  {% block content %}
+  <div class="container-fluid">
+    <div class="row" style="background-image: url('{% static 'images/11.jpg' %}'); background-size: cover; background-repeat: no-repeat;height:650px;overflow:hidden">
+    <div class="row d-flex align-items-center carousel" >
+      <div class="col-md-6 fix">
+        <h1 class="text-white">TRANSFORM YOUR HOME WITH US</h1>
+        <h1 class="text-white">WITH AWESOME INTERIORS AND BUDGET FRIENDLY</h1>
+      </div>
+      <div class="col-md-6">
+        {% include 'form.html' %}
+      </div>
+    </div>
+  </div> 
+</div> 
+</div>
+
+<section class="section mt-1" style="padding: 20px;">
+  <div class="container mx-auto">
+      <div class="row">
+          <div class="col-md-12 text-center">
+              <h2>The One-Stop Shop For All Your Home Decor Needs</h2>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-3">
+              <div class="card mb-4 shadow-sm text-truncate">
+                  <img src="{% static 'images/11.jpg' %}" class="card-img-top mx-auto d-block" alt="Reason 1 Image">
+                  <div class="card-body text-center">
+                      <h4>Luxury Interiors</h4>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="card mb-4 shadow-sm">
+                  <img src="{% static 'images/11.jpg' %}" class="card-img-top mx-auto d-block" alt="Reason 2 Image">
+                  <div class="card-body text-center">
+                      <h4>Renovations</h4>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="card mb-4 shadow-sm">
+                  <img src="{% static 'images/11.jpg' %}" class="card-img-top mx-auto d-block" alt="Reason 3 Image">
+                  <div class="card-body text-center">
+                      <h4>Commercial Interiors</h4>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card mb-4 shadow-sm">
+                <img src="{% static 'images/11.jpg' %}" class="card-img-top mx-auto d-block" alt="Reason 3 Image">
+                <div class="card-body text-center">
+                    <h4>Furniture & Decor</h4>
+                </div>
+            </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+
+<section class="our-process-section mt-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center heading">Our Process</h1>
+                <p class="text-center heading">At Our Company, we follow a structured process to ensure that your project is executed smoothly and meets your expectations.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card process-item">
+                    <div class="card-body">
+                        <h4 class="card-title">Client Discussion</h4>
+                        <p class="card-text">Meetings with the client to know their specifications, requirements, and demands.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card process-item">
+                    <div class="card-body">
+                        <h4 class="card-title">Site Visit</h4>
+                        <p class="card-text">Visiting the site and analyzing the place and taking measurements of the required area.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card process-item">
+                    <div class="card-body">
+                        <h4 class="card-title">Theme/Style Selection</h4>
+                        <p class="card-text">Selecting a theme/style which suits the client and their needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card process-item">
+                    <div class="card-body">
+                        <h4 class="card-title">Concept</h4>
+                        <p class="card-text">Make conceptual drawings and create renders by considering all requirements.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card process-item">
+                    <div class="card-body">
+                        <h4 class="card-title">Estimate</h4>
+                        <p class="card-text">An estimate with the specified budget will be presented with the detailed pricing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card process-item">
+                    <div class="card-body">
+                        <h4 class="card-title">Execution</h4>
+                        <p class="card-text">Once the estimate is approved, the execution starts where we turn your dream home into reality.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- interior_solution/templates/solution_section.html -->
+<section class="complete-interior-solutions mt-3">
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center">Complete Interior Solutions at One Place</h1>
+            <div class="col-md-4">
+                <div class="icon" style="font-size: 48px;">
+                    <i class="fas fa-utensils"></i> <!-- Icon for Modular Kitchen -->
+                </div>
+                <h3>Modular Kitchen</h3>
+            </div>
+            <div class="col-md-4">
+                <div class="icon" style="font-size: 48px;">
+                    <i class="fas fa-cube"></i> <!-- Icon for Crockery Unit -->
+                </div>
+                <h3>Crockery Unit</h3>
+            </div>
+            <div class="col-md-4">
+                <div class="icon" style="font-size: 48px;">
+                    <i class="fas fa-tshirt"></i> <!-- Icon for Wardrobes -->
+                </div>
+                <h3>Wardrobes</h3>
+            </div>
+            <div class="col-md-4">
+                <div class="icon" style="font-size: 48px;">
+                    <i class="fas fa-tv"></i> <!-- Icon for TV Units -->
+                </div>
+                <h3>TV Units</h3>
+            </div>
+            <div class="col-md-4">
+                <div class="icon" style="font-size: 48px;">
+                    <i class="fas fa-paint-brush" ></i> <!-- Icon for Painting -->
+                </div>
+                <h3>Painting</h3>
+            </div>
+            <div class="col-md-4">
+                <div class="icon" style="font-size: 48px;">
+                    <i class="fas fa-laptop"></i> <!-- Icon for Study Tables -->
+                </div>
+                <h3>Study Tables</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+ 
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/popper.js' %}"></script>
+  {% endblock %}
+</body>
+</html>
